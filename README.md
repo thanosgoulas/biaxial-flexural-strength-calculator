@@ -42,7 +42,7 @@ The single-specimen calculator operates independently of numpy and matplotlib. I
 ## Running the application
 
 ```bash
-git clone https://github.com/<your-username>/biaxial-flexural-strength-calculator.git
+git clone https://github.com/thanosgoulas/biaxial-flexural-strength-calculator.git
 cd biaxial-flexural-strength-calculator
 python BiaxialStrengthCalculator.py
 ```
