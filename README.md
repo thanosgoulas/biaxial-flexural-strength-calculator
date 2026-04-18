@@ -49,28 +49,6 @@ python BiaxialStrengthCalculator.py
 
 On Windows, the `.py` file can also be launched by double-clicking.
 
-## Building a standalone executable
-
-The application can be packaged as a standalone `.exe` (Windows), `.app` (macOS) or binary (Linux) using [PyInstaller](https://pyinstaller.org/):
-
-```bash
-pip install pyinstaller
-```
-
-```bash
-pyinstaller --onefile --windowed --name BiaxialStrengthCalculator ^
-  --exclude-module PyQt5 --exclude-module PyQt6 ^
-  --exclude-module PySide2 --exclude-module PySide6 ^
-  --exclude-module wx --exclude-module IPython ^
-  BiaxialStrengthCalculator.py
-```
-
-On macOS/Linux, replace `^` with `\` for line continuation.
-
-The output executable is placed in the `dist/` directory. The `--onefile` flag produces a single self-contained file; omitting it produces a faster-launching folder-based build instead. The `--windowed` flag suppresses the console window on Windows. The `--exclude-module` flags remove unused matplotlib backends that would otherwise add 20–30 MB to the output.
-
-Expected executable size is approximately 70–90 MB (one-file) or 60–80 MB (folder). The bulk of this is numpy and matplotlib; the application code itself is around 50 KB. For a calculator-only build without Weibull plotting (~15 MB), uninstall numpy and matplotlib from the build environment prior to running PyInstaller.
-
 ## Usage
 
 ### Single-specimen calculation
